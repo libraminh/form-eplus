@@ -726,11 +726,8 @@ body {
   .wrap-menu .social-navbar li {
     margin-right: 50px;
   }
-}
-
-@media (max-width: 325px) {
-  .social-navbar {
-    bottom: 5px !important;
+  .primary-navbar li {
+    margin-bottom: 40px !important;
   }
 }
 
