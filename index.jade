@@ -2,6 +2,50 @@ include jadefiles/global/head.jade
 |
 |
 body
+  .wrap-popup
+    .popup-section
+      .popup-wrap#popup-android
+        .col-md-4
+          
+          .media
+            .wrap-media
+              .media-left
+                a(href='#')
+                  img.media-object(src='http://via.placeholder.com/100x150', alt='...')
+              |             
+              .media-body
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ANDROID
+            |             
+            .media-btn
+              a.btn.btn-blue(href='#')
+                i.fa.fa-mobile(aria-hidden='true')
+                |                 T&#x1EA3;i App
+              |               
+              a#close-btn.btn.btn-white(href='#')
+                | B&#x1ECF; qua
+      |
+      |
+      .popup-wrap#popup-ios
+        .col-md-4
+          
+          .media
+            .wrap-media
+              .media-left
+                a(href='#')
+                  img.media-object(src='http://via.placeholder.com/100x150', alt='...')
+              |             
+              .media-body
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. IOS
+            |             
+            .media-btn
+              a.btn.btn-blue(href='#')
+                i.fa.fa-mobile(aria-hidden='true')
+                |                 T&#x1EA3;i App
+              |               
+              a#close-btn1.btn.btn-white(href='#')
+                | B&#x1ECF; qua
   |
   |
   .home-wrap
@@ -96,7 +140,7 @@ body
                 option(value='50') B&#x1EBF;n Tre
             |
             |
-            a.btn.btn-search.text-uppercase#btn-search-1(data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample") TÌM KIẾM
+            a.btn.btn-search.btn-search-1.text-uppercase(data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample") TÌM KIẾM
               i.fa.fa-search.icon-search(aria-hidden='true')
           |
           |
@@ -284,7 +328,7 @@ body
                 option(value='50') B&#x1EBF;n Tre
             |
             |
-            a.btn.btn-search.text-uppercase#btn-search-1(data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1") TÌM KIẾM
+            a.btn.btn-search.text-uppercase.btn-search-1(data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1") TÌM KIẾM
               i.fa.fa-search.icon-search(aria-hidden='true')
           |
           |

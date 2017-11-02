@@ -68,6 +68,177 @@ input.nice-select-filter {
 
 /* IMPORT LAYOUT
    ----------------------------- */
+/**** POPUP SECTION ***/
+.wrap-popup .popup-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.wrap-popup .popup-section .close-btn {
+  content: .wrap-popup .popup-section .close-btn times;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 200;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  cursor: pointer;
+}
+
+.wrap-popup .popup-section .close-btn:hover {
+  color: #ccc;
+}
+
+.wrap-popup .popup-wrap {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.8s cubic-bezier(0.77, -0.11, 0.27, 1.59);
+  -o-transition: all 0.8s cubic-bezier(0.77, -0.11, 0.27, 1.59);
+  transition: all 0.8s cubic-bezier(0.77, -0.11, 0.27, 1.59);
+  position: absolute;
+  z-index: 10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.wrap-popup .popup-open {
+  opacity: 1;
+  -webkit-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+.wrap-popup .popup-wrap-open {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.wrap-popup .media {
+  background: #ffffff;
+  border-radius: 4px;
+  color: #666666;
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.wrap-popup .media p {
+  font-size: 14px;
+}
+
+.wrap-popup .media-left {
+  padding-right: 15px;
+}
+
+.wrap-popup .wrap-media {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap-popup .media-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.wrap-popup .media-btn .btn-blue, .wrap-popup .media-btn .btn-white {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-radius: 4px;
+}
+
+.wrap-popup .media-btn .btn-blue {
+  background: #0089db;
+  color: #ffffff;
+  padding: 6px 20px;
+  margin-right: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.wrap-popup .media-btn .btn-blue i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.wrap-popup .media-btn .btn-blue:hover {
+  background: #0069a8;
+}
+
+.wrap-popup .media-btn .btn-white {
+  background: #ffffff;
+  color: rgba(102, 102, 102, 0.8);
+  border: 1px solid rgba(102, 102, 102, 0.8);
+}
+
+/**** END POPUP ****/
 @font-face {
   font-family: 'SVN-Bebas';
   src: url("0-tools/bebas/SVN-Bebas Neue Regular.ttf") format("truetype");
@@ -730,6 +901,12 @@ body {
   }
   .primary-navbar li {
     margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 326px) {
+  .wrap-brand a {
+    width: 30% !important;
   }
 }
 

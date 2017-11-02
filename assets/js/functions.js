@@ -6,7 +6,63 @@ $(function(){
   animateBtn();
   activeMenu();
   btnSearchClick();
+  doStuffInUserAgent();
 })
+
+function doStuffInUserAgent() {
+
+  // If iOS device
+  if(navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    ) {
+
+   popupShowIos();
+
+    // var jsScript = document.createElement("script");
+    // jsScript.setAttribute("type", "text/javascript");
+    // jsScript.setAttribute("src", "js/alternate_js_file.js");
+    // document.getElementsByTagName("head")[0].appendChild(jsScript );
+    //
+    // var cssScript = document.createElement("link");
+    // cssScript.setAttribute("rel", "stylesheet");
+    // cssScript.setAttribute("type", "text/css");
+    // cssScript.setAttribute("href", "css/alternate_css_file.css");
+    // document.getElementsByTagName("head")[0].appendChild(cssScript);
+
+    // If Andoird, webOS, BlackBerry, Windowphone device
+  } else if(navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+
+    popupShowAndroid();
+  }
+
+  else{
+     // write code for your desktop clients here
+  }
+}
+
+
+function popupShowIos() {
+  $('.popup-section').addClass('popup-open');
+  $('#popup-ios').addClass('popup-wrap-open');
+
+  $('#close-btn1').not('.popup-wrap').on('click', function(){
+    $('.popup-section').removeClass('popup-open');
+  })
+}
+
+function popupShowAndroid() {
+  $('.popup-section').addClass('popup-open');
+  $('#popup-android').addClass('popup-wrap-open');
+
+  $('#close-btn').not('.popup-wrap').on('click', function(){
+    $('.popup-section').removeClass('popup-open');
+  })
+}
+
 
 function activeCarousel() {
   $('.carousel-1').owlCarousel({
@@ -58,7 +114,7 @@ function activeMenu() {
 }
 
 function btnSearchClick() {
-  $('#btn-search-1').on('click', function(){
+  $('.btn-search-1').on('click', function(){
     if($(window).width() > 1120) {
       $('.carousel-1').toggleClass('push-carousel');
     }
