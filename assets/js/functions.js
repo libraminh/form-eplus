@@ -17,7 +17,22 @@ function activeCarousel() {
     nav: false,
     dots: false,
     navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    responsive:{
+      0:{
+          autoplay: false,
+          items:1,
+      },
+      768:{
+          autoplay: true,
+          items:1,
+      },
+      1000:{
+          autoplay: true,
+          items:1,
+      },
+    }
   });
+
 }
 
 function animateBtn() {
