@@ -36,17 +36,19 @@ function activeCarousel() {
 }
 
 function animateBtn() {
-  setInterval(function(){
-    $('#btn-search-1').addClass('animated tada').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass('animated tada');
-    });
-  }, 5000);
+  if($(window).width() > 1120) {
+    setInterval(function(){
+      $('#btn-search-1').addClass('animated rubberBand').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).removeClass('animated rubberBand');
+      });
+    }, 5000);
 
-  setInterval(function(){
-    $('#btn-search-2').addClass('animated tada').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass('animated tada');
-    });
-  }, 10000);
+    setInterval(function(){
+      $('#btn-search-2').addClass('animated rubberBand').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).removeClass('animated rubberBand');
+      });
+    }, 10000);
+  }
 }
 
 function activeMenu() {

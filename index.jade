@@ -238,9 +238,192 @@ body
             a.btn.btn-search.text-uppercase#btn-search-2(href="#") SUBSCRIBE
         
         |   
-        #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') ...
-        |   
-        #contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') ...
+        #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+          form.wrap-form
+            .form-group
+              input.form-control(type="text" placeholder="Từ khóa... (vd: Nhân viên kinh doanh)")
+            |
+            |
+            .form-group
+              input(type="text").nice-select-filter.d-none
+              select.form-control(name='location', data-placeholder='Nhấp chọn Ngành nghề', style='width:100%;', tabindex='2')
+                option(value='0') Nhấp chọn Ngành nghề
+                |                                                                                                                                 
+                option(value='47') An Giang
+                |                                                                                     
+                option(value='20') B&agrave; R&#x1ECB;a - V&utilde;ng T&agrave;u
+                |                                                                                     
+                option(value='62') B&#x1EA1;c Li&ecirc;u
+                |                                                                                     
+                option(value='25') B&#x1EAF;c Giang
+                |                                                                                     
+                option(value='54') B&#x1EAF;c K&#x1EA1;n
+                |                                                                                     
+                option(value='8') B&#x1EAF;c Ninh
+                |                                                                                     
+                option(value='50') B&#x1EBF;n Tre
+            |
+            |
+            .form-group
+              input(type="text").nice-select-filter.d-none
+              select.form-control(name='location', data-placeholder='Nhấp chọn địa điểm', style='width:100%;', tabindex='2')
+                option(value='0') Nhấp chọn địa điểm
+                |                                                                                                                                 
+                option(value='47') An Giang
+                |                                                                                     
+                option(value='20') B&agrave; R&#x1ECB;a - V&utilde;ng T&agrave;u
+                |                                                                                     
+                option(value='62') B&#x1EA1;c Li&ecirc;u
+                |                                                                                     
+                option(value='25') B&#x1EAF;c Giang
+                |                                                                                     
+                option(value='54') B&#x1EAF;c K&#x1EA1;n
+                |                                                                                     
+                option(value='8') B&#x1EAF;c Ninh
+                |                                                                                     
+                option(value='50') B&#x1EBF;n Tre
+            |
+            |
+            a.btn.btn-search.text-uppercase#btn-search-1(data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1") TÌM KIẾM
+              i.fa.fa-search.icon-search(aria-hidden='true')
+          |
+          |
+          .wrap-toggle.collapse#collapseExample1
+            .wrap-toggle-box
+              .brand-logo
+                img(src="assets/img/brand.png", alt="")
+              |
+              |
+              .info-job
+                h4 Nhân viên Kinh Doanh - Marketing
+                p.info-job-text 
+                  i.fa.fa-briefcase(aria-hidden='true')
+                  span Công ty Cổ phần Nhà hàng thức ăn nhanh BURGER - KING
+                p.info-job-text 
+                  i.fa.fa-map-marker(aria-hidden='true')
+                  span Hồ Chí Minh
+                ul.list-unstyled
+                  li
+                    i.fa.fa-money(aria-hidden='true')
+                    span.text-red 7 - 10 Triệu
+                  li
+                    i.fa.fa-table(aria-hidden='true')
+                    span.text-red 30/10/2017
+                  li
+                    i.fa.fa-users(aria-hidden='true')
+                    span.text-red 50
+                  li
+                    i.fa.fa-clock-o(aria-hidden='true')
+                    span.text-red Full-time
+              |
+              |
+              a.btn.btn-apply.text-uppercase(href="#") ỨNG TUYỂN NGAY
+            |
+            |
+            .wrap-toggle-box
+              .brand-logo
+                img(src="assets/img/brand.png", alt="")
+              |
+              |
+              .info-job
+                h4 Nhân viên Kinh Doanh - Marketing
+                p.info-job-text 
+                  i.fa.fa-briefcase(aria-hidden='true')
+                  span Công ty Cổ phần Nhà hàng thức ăn nhanh BURGER - KING
+                p.info-job-text 
+                  i.fa.fa-map-marker(aria-hidden='true')
+                  span Hồ Chí Minh
+                ul.list-unstyled
+                  li
+                    i.fa.fa-money(aria-hidden='true')
+                    span.text-red 7 - 10 Triệu
+                  li
+                    i.fa.fa-table(aria-hidden='true')
+                    span.text-red 30/10/2017
+                  li
+                    i.fa.fa-users(aria-hidden='true')
+                    span.text-red 50
+                  li
+                    i.fa.fa-clock-o(aria-hidden='true')
+                    span.text-red Full-time
+              |
+              |
+              a.btn.btn-apply.text-uppercase(href="#") ỨNG TUYỂN NGAY
+            |
+            |
+            .wrap-toggle-box
+              .brand-logo
+                img(src="assets/img/brand.png", alt="")
+              |
+              |
+              .info-job
+                h4 Nhân viên Kinh Doanh - Marketing
+                p.info-job-text 
+                  i.fa.fa-briefcase(aria-hidden='true')
+                  span Công ty Cổ phần Nhà hàng thức ăn nhanh BURGER - KING
+                p.info-job-text 
+                  i.fa.fa-map-marker(aria-hidden='true')
+                  span Hồ Chí Minh
+                ul.list-unstyled
+                  li
+                    i.fa.fa-money(aria-hidden='true')
+                    span.text-red 7 - 10 Triệu
+                  li
+                    i.fa.fa-table(aria-hidden='true')
+                    span.text-red 30/10/2017
+                  li
+                    i.fa.fa-users(aria-hidden='true')
+                    span.text-red 50
+                  li
+                    i.fa.fa-clock-o(aria-hidden='true')
+                    span.text-red Full-time
+              |
+              |
+              a.btn.btn-apply.text-uppercase(href="#") ỨNG TUYỂN NGAY
+            |
+            |
+            .wrap-toggle-box
+              .brand-logo
+                img(src="assets/img/brand.png", alt="")
+              |
+              |
+              .info-job
+                h4 Nhân viên Kinh Doanh - Marketing
+                p.info-job-text 
+                  i.fa.fa-briefcase(aria-hidden='true')
+                  span Công ty Cổ phần Nhà hàng thức ăn nhanh BURGER - KING
+                p.info-job-text 
+                  i.fa.fa-map-marker(aria-hidden='true')
+                  span Hồ Chí Minh
+                ul.list-unstyled
+                  li
+                    i.fa.fa-money(aria-hidden='true')
+                    span.text-red 7 - 10 Triệu
+                  li
+                    i.fa.fa-table(aria-hidden='true')
+                    span.text-red 30/10/2017
+                  li
+                    i.fa.fa-users(aria-hidden='true')
+                    span.text-red 50
+                  li
+                    i.fa.fa-clock-o(aria-hidden='true')
+                    span.text-red Full-time
+              |
+              |
+              a.btn.btn-apply.text-uppercase(href="#") ỨNG TUYỂN NGAY
+          |
+          |
+          form.wrap-form
+            .form-group
+              small Theo dõi ngay để không bỏ lỡ
+              p Hàng nghìn công việc cực “hot” liên tục cập nhật
+            |
+            |
+            .form-group
+              input.form-control(type="text" placeholder="Nhập Email của bạn")
+            |
+            |
+            a.btn.btn-search.text-uppercase#btn-search-2(href="#") SUBSCRIBE
       |
       |
       .wrap-brand.mb-4
