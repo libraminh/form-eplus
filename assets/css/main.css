@@ -728,5 +728,11 @@ body {
   }
 }
 
+@media (max-width: 325px) {
+  .social-navbar {
+    bottom: 5px !important;
+  }
+}
+
 /* IMPORT RESPONSIVE
    ----------------------------- */
