@@ -2,11 +2,25 @@ new WOW().init();
 
 $(function(){
   niceSelectFilter();
-  activeCarousel();
+  // activeCarousel();
   animateBtn();
   activeMenu();
   btnSearchClick();
   doStuffInUserAgent();
+  lightSearch();
+
+  // $('.wrap-content .wrap-form .form-control').on('focusin', function(){
+  //   $('.wrap-form').css({
+  //     'transform' : 'scale(1.1)'
+  //   });
+  // })
+
+
+  // $('.wrap-content').focus(function(){
+  //   $('.wrap-form').css({
+  //     'transform' : 'scale(1.1)'
+  //   });
+  // })
 })
 
 function doStuffInUserAgent() {
@@ -43,7 +57,6 @@ function doStuffInUserAgent() {
      // write code for your desktop clients here
   }
 }
-
 
 function popupShowIos() {
   $('.popup-section').addClass('popup-open');
@@ -128,4 +141,45 @@ function btnSearchClick() {
     $('.home-wrap').toggleClass('abc');
 
   })
+}
+
+
+
+function lightSearch() {
+    var isSearch = false;
+    $('.wrap-content .wrap-form .form-control').on('focus', function() {
+        if(isSearch === false) {
+            $('.backdrop-search').toggleClass('toggleBackdrop');
+            // $('body').toggleClass('focused ');
+            $('.tab-pane').toggleClass('act-search');
+            $('.close-icon').toggleClass('show-close-icon');
+            isSearch = true;
+        }
+    })
+    $('.close-icon').on('click', function() {
+        if(isSearch === true) {
+            $('.backdrop-search').toggleClass('toggleBackdrop');
+            // $('body').toggleClass('focused ');
+            $('.tab-pane').toggleClass('act-search');
+            $('.close-icon').removeClass('show-close-icon');
+            isSearch = false;
+        }
+    })
+    // $('.tab-pane select[name="category"] + div input, .tab-pane select[name="location"] + div input').on('focus', function() {
+    //     if(isSearch === false) {
+    //         $('.backdrop-search').toggleClass('toggleBackdrop');
+    //         $('body').toggleClass('focused ');
+    //         $('.tab-pane').toggleClass('act-search');
+    //         isSearch = true;
+    //     }
+    // })
+    $('.backdrop-search').on('click', function() {
+        if(isSearch === true) {
+            $('.backdrop-search').toggleClass('toggleBackdrop');
+            // $('body').toggleClass('focused ');
+            $('.tab-pane').toggleClass('act-search');
+            $('.close-icon').removeClass('show-close-icon');
+            isSearch = false;
+        }
+    })
 }

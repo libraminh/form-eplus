@@ -3,6 +3,7 @@
 @import url(0-tools/bootstrap/bootstrap.min.css);
 @import url(0-tools/nice-select/nice-select.css);
 @import url(0-tools/chosen-js/chosen.min.css);
+@import url(0-tools/pe-icon-7-stroke/css/pe-icon-7-stroke.css);
 @import url(0-tools/font-awesome/css/font-awesome.min.css);
 @import url(0-tools/animate.css);
 @import url(0-tools/owl-carousel/owl.carousel.min.css);
@@ -242,6 +243,7 @@ input.nice-select-filter {
 }
 
 /**** END POPUP ****/
+/*** GLOBAL CSS ***/
 @font-face {
   font-family: 'SVN-Bebas';
   src: url("0-tools/bebas/SVN-Bebas Neue Regular.ttf") format("truetype");
@@ -250,6 +252,35 @@ input.nice-select-filter {
 body {
   background: #f3f3f3;
   font-family: "Roboto", sans-serif;
+}
+
+.act-search {
+  -webkit-transform: scale(1.05) !important;
+  -ms-transform: scale(1.05) !important;
+  transform: scale(1.05) !important;
+}
+
+.tab-pane {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+  transition: -webkit-transform 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+  -o-transition: transform 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+  transition: transform 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+  transition: transform 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7), -webkit-transform 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+}
+
+.backdrop-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 10;
+}
+
+.toggleBackdrop {
+  display: block;
 }
 
 .home-wrap {
@@ -285,7 +316,7 @@ body {
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  z-index: -1;
+  z-index: 1;
 }
 
 .slogan-gone {
@@ -293,6 +324,8 @@ body {
 }
 
 .carousel-1 {
+  background: url("../img/banner-1.png") no-repeat center;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -387,6 +420,10 @@ body {
   transform: translateY(10px);
 }
 
+.wrap-content .wrap-form .nice-select {
+  z-index: 100;
+}
+
 .wrap-brand {
   display: -webkit-box;
   display: -webkit-flex;
@@ -397,7 +434,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  z-index: 100;
+  z-index: -1;
 }
 
 .wrap-brand a {
@@ -414,12 +451,36 @@ body {
   width: 100%;
 }
 
+.close-icon {
+  position: absolute;
+  right: 0;
+  top: -32px;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+  -o-transition: 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+  transition: 0.5s cubic-bezier(0.72, -0.49, 0.31, 1.7);
+}
+
+.show-close-icon {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .wrap-content {
   width: 75%;
   position: relative;
   -webkit-transform: translateY(25%);
   -ms-transform: translateY(25%);
   transform: translateY(25%);
+  z-index: 100;
 }
 
 .wrap-content .nav-tabs {
@@ -811,12 +872,10 @@ body {
   font-weight: 500;
 }
 
+/***** RESPONSIVE *****/
 @media (max-width: 1120px) {
   .abc {
     height: auto !important;
-  }
-  .carousel-1 img {
-    width: auto !important;
   }
   .wrap-content {
     width: 95%;
@@ -854,9 +913,6 @@ body {
   }
   .wrap-brand a {
     width: 12%;
-  }
-  .owl-carousel {
-    height: auto !important;
   }
   .wrap-content .wrap-form {
     -webkit-box-orient: vertical;

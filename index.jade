@@ -2,6 +2,7 @@ include jadefiles/global/head.jade
 |
 |
 body
+  .backdrop-search
   .wrap-popup
     .popup-section
       .popup-wrap#popup-android
@@ -50,12 +51,7 @@ body
   |
   .home-wrap
     .owl-carousel.owl-theme.carousel-1
-      .item
-        img.w-100(src="assets/img/banner.png", alt="")
-      .item
-        img.w-100(src="assets/img/banner.png", alt="")
-      .item
-        img.w-100(src="assets/img/banner.png", alt="")
+
     |
     |
     img.slogan(src="assets/img/amazing.png", alt="")
@@ -94,7 +90,11 @@ body
       |
       |
       #myTabContent.tab-content
+        
         #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+          i.pe-7s-close-circle.close-icon
+          |
+          |
           form.wrap-form
             .form-group
               input.form-control(type="text" placeholder="Từ khóa... (vd: Nhân viên kinh doanh)")
@@ -283,6 +283,9 @@ body
         
         |   
         #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+          i.pe-7s-close-circle.close-icon
+          |
+          |
           form.wrap-form
             .form-group
               input.form-control(type="text" placeholder="Từ khóa... (vd: Nhân viên kinh doanh)")
@@ -471,8 +474,8 @@ body
       |
       |
       .wrap-brand.mb-4
-        a(href="#"): img(src="assets/img/brand-logo.png", alt="")
-        a(href="#"): img(src="assets/img/brand-logo-1.png", alt="")
+        a(href="https://www.youtube.com/watch?v=tEmTJREkEH8"): img(src="assets/img/brand-logo.png", alt="")
+        a(href="https://www.youtube.com/watch?v=tEmTJREkEH8"): img(src="assets/img/brand-logo-1.png", alt="")
       p.text-center.copyright Copyright @ JobApp 2017. All right reserved
     |
     |

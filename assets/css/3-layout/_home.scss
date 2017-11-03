@@ -117,9 +117,11 @@
 
 }
 
-
 /**** END POPUP ****/
 
+
+
+/*** GLOBAL CSS ***/
 
 @font-face {
   font-family: 'SVN-Bebas';
@@ -130,6 +132,28 @@ body {
   // overflow: hidden;
   background: #f3f3f3;
   @include font('Roboto');
+}
+
+.act-search {
+  transform: scale(1.05) !important;
+}
+.tab-pane {
+  transition: transform .5s cubic-bezier(0.72,-0.49, 0.31, 1.7);
+}
+
+.backdrop-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 10;
+}
+
+.toggleBackdrop {
+  display: block;
 }
 
 .home-wrap {
@@ -152,7 +176,7 @@ body {
   transform: translateX(-50%);
   width: 50%;
   transition: all .2s ease-in-out;
-  z-index: -1;
+  z-index: 1;
 }
 
 .slogan-gone {
@@ -160,6 +184,8 @@ body {
 }
 
 .carousel-1 {
+  background: url('../img/banner-1.png') no-repeat center;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -227,11 +253,15 @@ body {
   transform: translateY(10px);
 }
 
+.wrap-content .wrap-form .nice-select {
+  z-index: 100;
+}
+
 .wrap-brand {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 100;
+  z-index: -1;
 
   a {
     width: 10%;
@@ -248,10 +278,28 @@ body {
   }
 }
 
+.close-icon {
+  position: absolute;
+  right: 0;
+  top: -32px;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  transition: .5s cubic-bezier(0.72,-0.49, 0.31, 1.7);
+}
+
+.show-close-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .wrap-content {
   width: 75%;
   position: relative;
   transform: translateY(25%);
+  z-index: 100;
 
   .nav-tabs {
     border: none !important;
@@ -297,6 +345,7 @@ body {
     border-radius: 2px;
     padding: 25px 30px;
     margin-bottom: 30px;
+
 
     .form-group {
       position: relative;
@@ -539,16 +588,11 @@ body {
   }
 }
 
+/***** RESPONSIVE *****/
 @media (max-width: 1120px) {
 
   .abc {
     height: auto !important;
-  }
-
-  .carousel-1 {
-    img {
-      width: auto !important;
-    }
   }
 
   .wrap-content {
@@ -588,10 +632,6 @@ body {
 
   .wrap-brand a {
     width: 12%;
-  }
-
-  .owl-carousel {
-    height: auto !important;
   }
 
   .wrap-content .wrap-form {
