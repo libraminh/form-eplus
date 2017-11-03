@@ -190,7 +190,7 @@ body {
   top: 0;
   left: 0;
   z-index: -2;
-  height: 100vh;
+  height: 100%;
   transition: all .5s ease-in-out;
 
   img {
@@ -650,6 +650,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  .home-wrap {
+    height: 100%;
+  }
+
+  .wrap-content {
+    margin-top: 70px;
+  }
+
   .slogan {
     display: none;
   }
@@ -664,6 +672,10 @@ body {
 
   .wrap-menu {
     width: 100%;
+  }
+
+  .copyright {
+    color: #000000;
   }
 }
 
